@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to my API');
+  res.send('Welcome hello world');
 });
 
 app.use(dbMiddleware); 
