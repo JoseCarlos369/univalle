@@ -10,7 +10,7 @@ const options = {
       description: 'Documentación de la API de mi proyecto',
     }
   },
-  apis: ['src/routes/*.js', 'src/controllers/*.js'], // Archivos donde se documentarán las rutas y controladores
+  apis: ['src/routes/*.js', 'src/controllers/*.js'], 
 };
 
 const specs = swaggerJsdoc(options);

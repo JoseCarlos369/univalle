@@ -3,7 +3,7 @@ import { config } from 'dotenv';
 
 const { Pool } = pkg;
 
-config(); // Cargar variables de entorno
+config(); 
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
