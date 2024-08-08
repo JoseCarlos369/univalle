@@ -8,14 +8,9 @@ const options = {
       title: 'API Documentation',
       version: '1.0.0',
       description: 'Documentación de la API de mi proyecto',
-    },
-    servers: [
-      {
-        url: 'https://univalle-seven.vercel.app',
-      },
-    ],
+    }
   },
-  apis: ['./src/routes/*.js', './src/controllers/*.js'], // Archivos donde se documentarán las rutas y controladores
+  apis: ['src/routes/*.js', 'src/controllers/*.js'], // Archivos donde se documentarán las rutas y controladores
 };
 
 const specs = swaggerJsdoc(options);
