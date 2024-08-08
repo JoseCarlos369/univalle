@@ -2,7 +2,8 @@ import express from 'express';
 import { config } from 'dotenv';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
-import { dbMiddleware } from './middleware/dbMiddleware.js'; // Importar el middleware
+import { dbMiddleware } from './middleware/dbMiddleware.js';
+import setupSwagger from './config/swagger.js'; // Importar configuración de Swagger
 
 config(); // Cargar variables de entorno
 
@@ -18,5 +19,7 @@ app.get('/', (req, res) => {
 
 app.use(dbMiddleware); // Usar el middleware de conexión a la base de datos
 app.use('/api/auth', authRoutes);
+
+setupSwagger(app); // Configurar Swagger
 
 export default app;
